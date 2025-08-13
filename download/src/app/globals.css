@@ -1,0 +1,79 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  font-family: 'Inter', sans-serif;
+}
+
+@layer base {
+  :root {
+    --background: 22 17% 92%; /* #e6e2df */
+    --foreground: 228 98% 17%; /* #010b58 */
+    --card: 22 17% 92%; /* #e6e2df */
+    --card-foreground: 228 98% 17%;
+    --popover: 22 17% 92%;
+    --popover-foreground: 228 98% 17%;
+    --primary: 228 98% 17%; /* #010b58 */
+    --primary-foreground: 0 0% 100%;
+    --secondary: 236 30% 40%; /* #484d83 */
+    --secondary-foreground: 0 0% 100%;
+    --muted: 220 5% 85%; /* #c5c2c7 */
+    --muted-foreground: 223 14% 58%; /* #89899f */
+    --accent: 25 43% 61%; /* #c98f6e */
+    --accent-foreground: 228 98% 17%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 220 5% 85%; /* #c5c2c7 */
+    --input: 220 5% 85%;
+    --ring: 228 98% 17%;
+    --chart-1: 12 76% 61%;
+    --chart-2: 173 58% 39%;
+    --chart-3: 197 37% 24%;
+    --chart-4: 43 74% 66%;
+    --chart-5: 27 87% 67%;
+    --radius: 0.5rem;
+  }
+
+  .dark {
+    --background: 222.2 84% 4.9%;
+    --foreground: 210 40% 98%;
+    --card: 222.2 84% 4.9%;
+    --card-foreground: 210 40% 98%;
+    --popover: 222.2 84% 4.9%;
+    --popover-foreground: 210 40% 98%;
+    --primary: 226 77% 49%;
+    --primary-foreground: 210 40% 98%;
+    --secondary: 217.2 32.6% 17.5%;
+    --secondary-foreground: 210 40% 98%;
+    --muted: 217.2 32.6% 17.5%;
+    --muted-foreground: 215 20.2% 65.1%;
+    --accent: 348 100% 78%;
+    --accent-foreground: 226 77% 19%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 217.2 32.6% 17.5%;
+    --input: 217.2 32.6% 17.5%;
+    --ring: 226 77% 49%;
+    --chart-1: 220 70% 50%;
+    --chart-2: 160 60% 45%;
+    --chart-3: 30 80% 55%;
+    --chart-4: 280 65% 60%;
+    --chart-5: 340 75% 55%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+@layer components {
+  .product-card-buttons {
+    @apply absolute bottom-4 left-1/2 -translate-x-1/2 flex w-[calc(100%-2rem)] items-center justify-center gap-2 opacity-0 transition-opacity duration-300 group-hover:opacity-100;
+  }
+}
