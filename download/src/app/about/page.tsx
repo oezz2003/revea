@@ -10,30 +10,29 @@ export default function AboutPage() {
           <h1 className="font-headline text-4xl font-bold tracking-tight md:text-5xl">
             About revea
           </h1>
-          <p className="mt-4 max-w-3xl text-lg text-muted-foreground">
-            We're not just a store; we are a community passionate about style, quality, and innovation.
+          <p className="mt-4 max-w-3xl text-lg text-muted-foreground font-semibold">
+            Second Life, First Choice.
           </p>
         </div>
 
         <div className="grid md:grid-cols-2 gap-16 items-center mb-24">
           <div className="relative h-96 w-full">
             <Image
-              src="https://placehold.co/600x400.png"
-              alt="Diverse group of people smiling"
+              src="/main logo.png"
+              alt="Revea Logo"
               fill
-              style={{ objectFit: 'cover' }}
+              style={{ objectFit: 'contain' }}
               className="rounded-lg shadow-lg"
-              data-ai-hint="diverse people shopping"
               loading="lazy"
             />
           </div>
           <div>
             <h2 className="font-headline text-3xl font-bold">Our Story</h2>
             <p className="mt-4 text-muted-foreground">
-              Founded in 2024, revea was born from a simple yet powerful idea: to make online shopping a truly seamless and enjoyable experience. We saw a world of cluttered online marketplaces and felt a calling to create a curated space where quality meets affordability.
+              At revea, our journey began with a simple yet powerful vision: to transform waste into beauty and give materials a second life. Inspired by the growing need for sustainable fashion, we set out to create bags and wallets that blend style, durability, and environmental responsibility.
             </p>
             <p className="mt-4 text-muted-foreground">
-              Starting as a small, passionate team, we've grown into a trusted destination for fashion lovers and tech enthusiasts alike. Our journey is one of constant evolution, driven by our commitment to our customers and our love for what we do.
+              Revea is more than a brand — it's a movement. Every stitch tells a story of innovation, every texture whispers of the past, and every purchase drives change for a greener future. Together, we're proving that sustainability can be stylish, and that the skin of our planet deserves protection — just like our own.
             </p>
           </div>
         </div>
@@ -69,16 +68,18 @@ export default function AboutPage() {
         <div>
           <h2 className="font-headline text-3xl font-bold text-center">Meet Our Team</h2>
           <p className="text-muted-foreground text-center mt-2">The passionate individuals who make it all possible</p>
-          <div className="mt-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="mt-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-6 gap-8">
             {[
-              { name: 'John Doe', role: 'Founder & CEO', hint: 'male CEO portrait' },
-              { name: 'Jane Smith', role: 'Marketing Director', hint: 'female marketing director' },
-              { name: 'Mike Johnson', role: 'Lead Developer', hint: 'male developer' },
-              { name: 'Emily Brown', role: 'Head of Fashion', hint: 'female fashion designer' },
+              { name: 'Ahmed', role: 'Team Member', image: '/AHMED.jpg' },
+              { name: 'Badr', role: 'Team Member', image: '/BADR.jpg' },
+              { name: 'Basmala', role: 'Team Member', image: '/BASMALA.jpg' },
+              { name: 'Hussien', role: 'Team Member', image: '/HUSSIEN.jpg' },
+              { name: 'Nada', role: 'Team Member', image: '/NADA.jpg' },
+              { name: 'Yousef', role: 'Team Member', image: '/YOUSEF.jpg' },
             ].map((member) => (
               <div key={member.name} className="flex flex-col items-center text-center p-4 rounded-lg hover:bg-card transition-colors">
                 <Avatar className="h-24 w-24 mb-4 ring-2 ring-primary/20">
-                  <AvatarImage src={`https://placehold.co/100x100.png`} alt={member.name} data-ai-hint={member.hint} loading="lazy" />
+                  <AvatarImage src={member.image} alt={member.name} loading="lazy" />
                   <AvatarFallback>{member.name.slice(0, 2).toUpperCase()}</AvatarFallback>
                 </Avatar>
                 <h4 className="font-headline font-semibold">{member.name}</h4>
