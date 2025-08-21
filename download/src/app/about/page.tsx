@@ -65,29 +65,7 @@ export default function AboutPage() {
             </div>
         </div>
 
-        <div>
-          <h2 className="font-headline text-3xl font-bold text-center">Meet Our Team</h2>
-          <p className="text-muted-foreground text-center mt-2">The passionate individuals who make it all possible</p>
-          <div className="mt-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-6 gap-8">
-            {[
-              { name: 'Ahmed', role: 'Team Member', image: '/AHMED.jpg' },
-              { name: 'Badr', role: 'Team Member', image: '/BADR.jpg' },
-              { name: 'Basmala', role: 'Team Member', image: '/BASMALA.jpg' },
-              { name: 'Hussien', role: 'Team Member', image: '/HUSSIEN.jpg' },
-              { name: 'Nada', role: 'Team Member', image: '/NADA.jpg' },
-              { name: 'Yousef', role: 'Team Member', image: '/YOUSEF.jpg' },
-            ].map((member) => (
-              <div key={member.name} className="flex flex-col items-center text-center p-4 rounded-lg hover:bg-card transition-colors">
-                <Avatar className="h-24 w-24 mb-4 ring-2 ring-primary/20">
-                  <AvatarImage src={member.image} alt={member.name} loading="lazy" />
-                  <AvatarFallback>{member.name.slice(0, 2).toUpperCase()}</AvatarFallback>
-                </Avatar>
-                <h4 className="font-headline font-semibold">{member.name}</h4>
-                <p className="text-sm text-primary">{member.role}</p>
-              </div>
-            ))}
-          </div>
-        </div>
+  {/* Our Team section removed as requested */}
       </div>
     </div>
   );
